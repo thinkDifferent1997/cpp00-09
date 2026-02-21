@@ -26,8 +26,23 @@ class   Bureaucrat
 		Bureaucrat(const std::string& name, int grade);
 		~Bureaucrat();
 
+
+
+		class	GradeTooHighExcpetion: public std::exception
+		{
+
+		};
+
+		class	GradeTooLowExcpetion: public std::exception
+		{
+		
+		};
+
 		std::string	getName() const;
 		int					getGrade();
+
+		void	incrementGrade();
+		void	decrementGrade();
 };
 
 std::ostream	&operator<<(std::ostream &out, const Bureaucrat &other);
