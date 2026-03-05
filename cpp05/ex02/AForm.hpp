@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.hpp                                           :+:      :+:    :+:   */
+/*   AForm.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elizasikira <elizasikira@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -16,7 +16,7 @@
 
 class Bureaucrat;
 
-class Form
+class AForm
 {
     private:
         const   std::string m_name;
@@ -24,12 +24,15 @@ class Form
         const int           m_gradeToSign;
         const int           m_gradeToExecute;
 
+	protected:
+		virtual void	performAction()const = 0;
+
     public:
-        Form();
-        Form(const Form& other);
-		Form &operator=(const Form& other);
-		Form(const std::string& name, int signGrade, int execGrade);
-        ~Form();
+        AForm();
+        AForm(const AForm& other);
+		AForm &operator=(const AForm& other);
+		AForm(const std::string& name, int signGrade, int execGrade);
+        ~AForm();
 
         class	GradeTooHighException: public std::exception
 		{
@@ -49,12 +52,22 @@ class Form
 				}
 		};
 
+		class	FormNotSignedException: public std::exception
+		{
+			public:
+				virtual const char* what() const throw()
+				{
+					return ("Form is not signed !");
+				}
+		};
+
         std::string	getName() const;
         bool    getIsSigned()const;
         int     getGradeToSign()const;
         int     getGradeToExecute()const;
-        void        beSigned(const Bureaucrat& other);
+        void	beSigned(const Bureaucrat& other);
+		void	execute(Bureaucrat const &executor)const;
 
 };
 
-std::ostream	&operator<<(std::ostream &out, const Form &other);
+std::ostream	&operator<<(std::ostream &out, const AForm &other);

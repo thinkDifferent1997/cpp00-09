@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
+#include "AForm.hpp"
 
 Bureaucrat::Bureaucrat(): m_name("Default"), m_grade(150){}
 
@@ -60,7 +60,7 @@ void    Bureaucrat::decrementGrade()
     m_grade++;
 }
 
-void    Bureaucrat::signForm(Form& form)
+void    Bureaucrat::signForm(AForm& form)
 {
     try
     {
@@ -69,7 +69,7 @@ void    Bureaucrat::signForm(Form& form)
     }
     catch(const std::exception& e)
     {
-        std::cout << m_name << "could not sign " << form.getName() << " because " << e.what() << std::endl;
+        std::cout << m_name << " could not sign " << form.getName() << " because " << e.what() << std::endl;
     }
     
 }

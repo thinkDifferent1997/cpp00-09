@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #pragma once
-#include "Form.hpp"
+#include "AForm.hpp"
 #include <iostream>
 #include <ostream>
 
@@ -51,7 +51,7 @@ class   Bureaucrat
 
 		void	incrementGrade();
 		void	decrementGrade();
-		void        signForm(Form& form);
+		void        signForm(AForm& form);
 
 
 

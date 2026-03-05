@@ -11,16 +11,19 @@
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
+#include "ShrubberyCreationForm.hpp"
 
 int main(void)
 {
 	try
 	{
-		Bureaucrat a("John", 1);
+		Bureaucrat a("John", 10);
 		std::cout << a << std::endl;
 		a.incrementGrade();
 		std::cout << a << std::endl;
+		ShrubberyCreationForm form("My form");
+		a.signForm(form);
+		form.execute(a);
 		
 	}
 	catch (std::exception& e)
