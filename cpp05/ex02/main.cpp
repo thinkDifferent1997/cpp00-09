@@ -6,13 +6,15 @@
 /*   By: elizasikira <elizasikira@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 19:25:29 by elsikira          #+#    #+#             */
-/*   Updated: 2026/04/19 23:24:47 by elizasikira      ###   ########.fr       */
+/*   Updated: 2026/04/19 23:39:56 by elizasikira      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
+
 
 int main(void)
 {
@@ -32,6 +34,12 @@ int main(void)
 		RobotomyRequestForm form2("Bender");
 		b.signForm(form2);
 		b.executeForm(form2);
+
+		Bureaucrat c("Alex", 3);
+		std::cout << c << std::endl;
+		PresidentialPardonForm form3("Trump");
+		c.signForm(form3);
+		c.executeForm(form3);
 	}
 	
 	catch (std::exception& e)
