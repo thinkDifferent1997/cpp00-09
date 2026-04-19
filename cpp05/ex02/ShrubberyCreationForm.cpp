@@ -6,7 +6,7 @@
 /*   By: elizasikira <elizasikira@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/02 00:25:47 by elsikira          #+#    #+#             */
-/*   Updated: 2026/03/02 01:44:13 by elizasikira      ###   ########.fr       */
+/*   Updated: 2026/04/19 22:47:19 by elizasikira      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,24 @@ void    ShrubberyCreationForm::performAction() const
     if (!outfile.is_open())
         return;
     outfile << "       _-_" << std::endl;
+    outfile << "    /~~   ~~\\" << std::endl;
+    outfile << " /~~         ~~\\" << std::endl;
+    outfile << "{               }" << std::endl;
+    outfile << " \\  _-     -_  /" << std::endl;
+    outfile << "   ~  \\\\ //  ~" << std::endl;
+    outfile << "      | |" << std::endl;
+    outfile << "      | |" << std::endl;
+
+        outfile << "       _-_" << std::endl;
+    outfile << "    /~~   ~~\\" << std::endl;
+    outfile << " /~~         ~~\\" << std::endl;
+    outfile << "{               }" << std::endl;
+    outfile << " \\  _-     -_  /" << std::endl;
+    outfile << "   ~  \\\\ //  ~" << std::endl;
+    outfile << "      | |" << std::endl;
+    outfile << "      | |" << std::endl;
+
+        outfile << "       _-_" << std::endl;
     outfile << "    /~~   ~~\\" << std::endl;
     outfile << " /~~         ~~\\" << std::endl;
     outfile << "{               }" << std::endl;

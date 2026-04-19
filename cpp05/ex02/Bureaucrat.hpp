@@ -6,7 +6,7 @@
 /*   By: elizasikira <elizasikira@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 19:25:14 by elsikira          #+#    #+#             */
-/*   Updated: 2026/03/02 01:42:27 by elizasikira      ###   ########.fr       */
+/*   Updated: 2026/04/19 23:19:37 by elizasikira      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,9 +51,8 @@ class   Bureaucrat
 
 		void	incrementGrade();
 		void	decrementGrade();
-		void        signForm(AForm& form);
-
-
+		void    signForm(AForm& form);
+		void	executeForm(AForm const& form)const;
 
 };
 

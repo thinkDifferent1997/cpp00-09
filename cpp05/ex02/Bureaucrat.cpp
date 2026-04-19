@@ -6,7 +6,7 @@
 /*   By: elizasikira <elizasikira@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/21 19:25:07 by elsikira          #+#    #+#             */
-/*   Updated: 2026/03/02 01:35:54 by elizasikira      ###   ########.fr       */
+/*   Updated: 2026/04/19 23:27:06 by elizasikira      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,23 @@ void    Bureaucrat::signForm(AForm& form)
     }
     
 }
+
+void    Bureaucrat::executeForm(AForm const& form) const
+{
+    try
+    {
+        {
+            form.execute(*this);
+            std::cout << m_name << " executed " << form.getName() << std::endl;
+        }
+    }
+    catch(const std::exception& e)
+    {
+        std::cout << m_name << " could not execute " << form.getName() << " because " << e.what() << std::endl;
+    }
+    
+}
+
 
 std::ostream    &operator<<(std::ostream &out, const Bureaucrat& other)
 {
