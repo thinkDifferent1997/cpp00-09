@@ -6,7 +6,7 @@
 /*   By: elizasikira <elizasikira@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 01:12:43 by elsikira          #+#    #+#             */
-/*   Updated: 2026/04/22 01:24:37 by elizasikira      ###   ########.fr       */
+/*   Updated: 2026/04/23 22:33:41 by elizasikira      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class ScalarConverter
         ~ScalarConverter();
 
         static bool isPseudo(const std::string& literal);
-        static bool printConversions(double d);
+        static void printConversions(double d);
     
     public:
         static void convert(const std::string& literal);

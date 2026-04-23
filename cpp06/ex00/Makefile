@@ -4,7 +4,7 @@ CXX = c++
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC = main.cpp  ScalarConverter
+SRC = main.cpp  ScalarConverter.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
