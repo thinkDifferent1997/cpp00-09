@@ -28,7 +28,6 @@ int main(void)
     std::cout << "The original array of ints is : ";
     ::iter(intArray, 5, printElement<int>);
     std::cout << std::endl;
-
     ::iter(intArray, 5, increment);
     std::cout << "The new incremented array of ints is : ";
     ::iter(intArray, 5, printElement<int>);
